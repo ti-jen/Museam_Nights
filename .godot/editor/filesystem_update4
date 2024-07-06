@@ -1,8 +1,0 @@
-res://scenes/world.tscn
-res://assets/Materials/bricks_M.tres
-res://assets/Materials/bricks_02_M.tres
-res://assets/Materials/bricks_03_M.tres
-res://assets/Materials/uniformcolor_black.tres
-res://shaders/psx_lit.gdshader
-res://assets/Materials/affine_texures.tres
-res://assets/Materials/stone_dark_M.tres
