@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://doktrq1fe7h4t"
+path="res://.godot/imported/sm_hallway_window_02_02.obj-f8ca916c5463af97ce232baef118be06.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sm_hallway_window_02_02.obj-f8ca916c5463af97ce232baef118be06.mesh"]
+
+source_file="res://assets/assets/sm_hallway_window_02_02.obj"
+dest_files=["res://.godot/imported/sm_hallway_window_02_02.obj-f8ca916c5463af97ce232baef118be06.mesh", "res://.godot/imported/sm_hallway_window_02_02.obj-f8ca916c5463af97ce232baef118be06.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

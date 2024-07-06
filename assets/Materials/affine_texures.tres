@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://d1x2yrbethiht"]
+
+[ext_resource type="Shader" path="res://shaders/psx_lit.gdshader" id="1_5pyh8"]
+[ext_resource type="Texture2D" uid="uid://t2geeava5bmf" path="res://assets/textures/sphinx.tga" id="2_ykmhs"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_5pyh8")
+shader_parameter/modulate_color = Color(0.827451, 0.796078, 0.756863, 1)
+shader_parameter/uv_scale = Vector2(2.5, 3)
+shader_parameter/uv_offset = Vector2(0, 0)
+shader_parameter/uv_pan_velocity = Vector2(0, 0)
+shader_parameter/albedoTex = ExtResource("2_ykmhs")

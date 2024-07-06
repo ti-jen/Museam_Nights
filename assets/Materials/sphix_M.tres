@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://csmhki8e33hpc"]
+
+[ext_resource type="Texture2D" uid="uid://t2geeava5bmf" path="res://assets/textures/sphinx.tga" id="1_7qt3c"]
+
+[resource]
+albedo_color = Color(0.776471, 0.737255, 0.690196, 1)
+albedo_texture = ExtResource("1_7qt3c")
