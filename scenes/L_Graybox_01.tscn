@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=3 uid="uid://cj5lx67nii1jn"]
+
+[ext_resource type="Material" path="res://assets/Materials/M_Grid_02.tres" id="1_k6v1i"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="2_ay16e"]
+[ext_resource type="PackedScene" uid="uid://sp8cq7x6nlbq" path="res://assets/assets/sm_graybox_01.tscn" id="3_mcmf2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vvu7i"]
+sky_top_color = Color(0.0823529, 0.0784314, 0.129412, 1)
+sky_horizon_color = Color(0, 0.0196078, 0.0705882, 1)
+ground_bottom_color = Color(0.00392157, 0.00784314, 0.00392157, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_ldh54"]
+sky_material = SubResource("ProceduralSkyMaterial_vvu7i")
+
+[sub_resource type="Environment" id="Environment_tyb8y"]
+background_mode = 2
+background_color = Color(1, 1, 1, 1)
+sky = SubResource("Sky_ldh54")
+ambient_light_source = 2
+ambient_light_color = Color(0.380392, 0.517647, 0.521569, 1)
+ambient_light_energy = 0.5
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_id37j"]
+
+[node name="world" type="Node3D"]
+
+[node name="stage" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+use_collision = true
+size = Vector3(20, 1, 20)
+material = ExtResource("1_k6v1i")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.5, 0)
+use_collision = true
+size = Vector3(20, 1, 20)
+material = ExtResource("1_k6v1i")
+
+[node name="env" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="env"]
+environment = SubResource("Environment_tyb8y")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="env"]
+transform = Transform3D(0.980137, 0.184558, 0.0725973, -0.116043, 0.236845, 0.964592, 0.160829, -0.953857, 0.253557, 3, 2.08319, 16)
+light_color = Color(0.662745, 0.956863, 1, 1)
+light_energy = 2.0
+shadow_enabled = true
+shadow_bias = 0.0
+shadow_blur = 0.0
+
+[node name="player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0.557348, 0)
+script = ExtResource("2_ay16e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_id37j")
+
+[node name="head" type="Node3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+
+[node name="Camera3D" type="Camera3D" parent="player/head"]
+
+[node name="SmGraybox01" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(30, 0, 0, 0, 15, 0, 0, 0, 1, -27, 0, -10)
+
+[node name="SmGraybox03" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(30, 0, 0, 0, 15, 0, 0, 0, 1, -27, 0, 9)
+
+[node name="SmGraybox02" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-8.74228e-07, 0, -1, 0, 15, 0, 20, 0, -4.37114e-08, -27, 0, -10)
+
+[node name="SmGraybox04" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-8.74228e-07, 0, -1, 0, 15, 0, 20, 0, -4.37114e-08, 4, 0, -10)
+
+[node name="SmGraybox05" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-8.74228e-07, 0, -3, 0, 1, 0, 20, 0, -1.31134e-07, 3, 0, -10)
