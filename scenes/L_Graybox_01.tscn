@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cj5lx67nii1jn"]
+[gd_scene load_steps=10 format=3 uid="uid://cj5lx67nii1jn"]
 
 [ext_resource type="Material" path="res://assets/Materials/M_Grid_02.tres" id="1_k6v1i"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_ay16e"]
 [ext_resource type="PackedScene" uid="uid://sp8cq7x6nlbq" path="res://assets/assets/sm_graybox_01.tscn" id="3_mcmf2"]
+[ext_resource type="Material" uid="uid://dkt8eithptht8" path="res://assets/Materials/M_Grid_03.tres" id="4_fdxky"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vvu7i"]
 sky_top_color = Color(0.0823529, 0.0784314, 0.129412, 1)
@@ -18,25 +19,27 @@ background_mode = 2
 background_color = Color(1, 1, 1, 1)
 sky = SubResource("Sky_ldh54")
 ambient_light_source = 2
-ambient_light_color = Color(0.380392, 0.517647, 0.521569, 1)
-ambient_light_energy = 0.5
+ambient_light_color = Color(0.466667, 0.435294, 0.47451, 1)
+ambient_light_energy = 0.6
 tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_id37j"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_idrt8"]
 
 [node name="world" type="Node3D"]
 
 [node name="stage" type="Node3D" parent="."]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+transform = Transform3D(3.1, 0, 0, 0, 1, 0, 0, 0, 4.9, 21, -0.5, 0)
 use_collision = true
 size = Vector3(20, 1, 20)
 material = ExtResource("1_k6v1i")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.5, 0)
+transform = Transform3D(3.1, 0, 0, 0, 1, 0, 0, 0, 4.9, -41, -0.5, 0)
 use_collision = true
 size = Vector3(20, 1, 20)
 material = ExtResource("1_k6v1i")
@@ -47,15 +50,69 @@ material = ExtResource("1_k6v1i")
 environment = SubResource("Environment_tyb8y")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="env"]
-transform = Transform3D(0.980137, 0.184558, 0.0725973, -0.116043, 0.236845, 0.964592, 0.160829, -0.953857, 0.253557, 3, 2.08319, 16)
+transform = Transform3D(0.350787, 0.918343, -0.183288, -0.116043, 0.236845, 0.964592, 0.929238, -0.317097, 0.189649, 3, 11.0832, 16)
 light_color = Color(0.662745, 0.956863, 1, 1)
 light_energy = 2.0
 shadow_enabled = true
 shadow_bias = 0.0
 shadow_blur = 0.0
 
+[node name="SpotLight3D2" type="SpotLight3D" parent="env"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5, 10, -3)
+light_color = Color(1, 0.905882, 0.690196, 1)
+light_energy = 4.705
+spot_angle = 82.3351
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="env"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5, 10, 3)
+light_color = Color(1, 0.905882, 0.690196, 1)
+light_energy = 4.705
+spot_angle = 82.3351
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="env"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2, 9, 10)
+light_color = Color(1, 0.905882, 0.690196, 1)
+light_energy = 4.705
+spot_angle = 82.3351
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="env"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -16, 9, 10)
+light_color = Color(1, 0.905882, 0.690196, 1)
+light_energy = 4.705
+spot_angle = 82.3351
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="env"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2, 4, 7)
+light_color = Color(1, 0.905882, 0.690196, 1)
+light_energy = 4.705
+spot_angle = 82.3351
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="env"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2, 4, -7)
+light_color = Color(1, 0.905882, 0.690196, 1)
+light_energy = 4.705
+spot_angle = 82.3351
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="env"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2, 9, -10)
+light_color = Color(1, 0.905882, 0.690196, 1)
+light_energy = 4.705
+spot_angle = 82.3351
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="env"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -16, 9, -10)
+light_color = Color(1, 0.905882, 0.690196, 1)
+light_energy = 4.705
+spot_angle = 82.3351
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="env"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -20, 11, 0)
+light_color = Color(1, 0.905882, 0.690196, 1)
+light_energy = 4.705
+spot_angle = 82.3351
+
 [node name="player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0.557348, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 5.55735, 7)
 script = ExtResource("2_ay16e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="player"]
@@ -66,18 +123,385 @@ shape = SubResource("CapsuleShape3D_id37j")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
 
 [node name="Camera3D" type="Camera3D" parent="player/head"]
+current = true
 
 [node name="SmGraybox01" parent="." instance=ExtResource("3_mcmf2")]
-transform = Transform3D(30, 0, 0, 0, 15, 0, 0, 0, 1, -27, 0, -10)
+transform = Transform3D(13.2, 0, 0, 0, 12, 0, 0, 0, 1, -24, 0, -13)
 
-[node name="SmGraybox03" parent="." instance=ExtResource("3_mcmf2")]
-transform = Transform3D(30, 0, 0, 0, 15, 0, 0, 0, 1, -27, 0, 9)
+[node name="SmGraybox55" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(13, 0, 0, 0, 5, 0, 0, 0, 1, -23, 0, -9)
 
-[node name="SmGraybox02" parent="." instance=ExtResource("3_mcmf2")]
-transform = Transform3D(-8.74228e-07, 0, -1, 0, 15, 0, 20, 0, -4.37114e-08, -27, 0, -10)
+[node name="SmGraybox79" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(13, 0, 0, 0, 5, 0, 0, 0, 1, -6, 0, -9)
+
+[node name="SmGraybox80" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(13, 0, 0, 0, 5, 0, 0, 0, 1, -12, 0, -13)
+
+[node name="SmGraybox20" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(13.2, 0, 0, 0, 12, 0, 0, 0, 1, -7, 0, -13)
+
+[node name="SmGraybox21" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 1, -11, 8.5, -13)
+
+[node name="SmGraybox102" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 1, -11, 8.5, 12)
+
+[node name="SmGraybox99" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3.5, -9)
+
+[node name="SmGraybox56" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(13, 0, 0, 0, 5, 0, 0, 0, 1, -23, 0, 8)
+
+[node name="SmGraybox100" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(13, 0, 0, 0, 5, 0, 0, 0, 1, -6, 0, 8)
+
+[node name="SmGraybox101" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3.5, 8)
+
+[node name="SmGraybox36" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 1, -11, 10, 12)
+
+[node name="SmGraybox24" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 1, -14, 4, -13)
 
 [node name="SmGraybox04" parent="." instance=ExtResource("3_mcmf2")]
-transform = Transform3D(-8.74228e-07, 0, -1, 0, 15, 0, 20, 0, -4.37114e-08, 4, 0, -10)
+transform = Transform3D(-3.49691e-07, 0, -1, 0, 12, 0, 8, 0, -4.37114e-08, 8, 0, -10)
+
+[node name="SmGraybox104" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-1.74846e-07, 0, -1, 0, 12, 0, 4, 0, -4.37114e-08, 8, 9.5, -2)
+
+[node name="SmGraybox103" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-3.49691e-07, 0, -1, 0, 12, 0, 8, 0, -4.37114e-08, 8, 0, 2)
+
+[node name="SmGraybox107" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-3.49691e-07, 0, -1.042, 0, 5, 0, 8, 0, -4.55473e-08, -22, 0, -10)
+
+[node name="SmGraybox111" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-3.49691e-07, 0, -1.042, 0, 12, 0, 8, 0, -4.55473e-08, -23, 0, -14)
+
+[node name="SmGraybox114" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-5.94475e-07, 0, -1, 0, 1, 0, 13.6, 0, -4.37114e-08, -23, 5, -6)
+
+[node name="SmGraybox112" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-3.49691e-07, 0, -1.042, 0, 12, 0, 8, 0, -4.55473e-08, -23, 0, 6)
+
+[node name="SmGraybox113" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-9.61651e-07, 8, 4.55473e-08, 0, -3.49691e-07, 1.042, 22, 3.49691e-07, 1.99093e-15, -27, 12, -11)
+
+[node name="SmGraybox108" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-3.64247e-07, 0, -1.042, 0, 5, 0, 8.333, 0, -4.55473e-08, -22, 0, 2)
+
+[node name="SmGraybox72" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-6.99382e-07, 0, -1, 0, 4, 0, 16, 0, -4.37114e-08, -18, 12, -8)
+
+[node name="SmGraybox84" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-6.99382e-07, 0, -1, 0, 4, 0, 16, 0, -4.37114e-08, 4, 12, -8)
+
+[node name="SmGraybox95" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-1.2204e-07, -0.776457, -5.79556, -3.394e-08, 2.89778, -1.55291, 3, 1.19727e-09, -2.53332e-07, -5, 6, -1)
+
+[node name="SmGraybox96" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(4.79984e-08, -1.73205, -1, -1.03422e-07, 1, -1.73205, 3, 6.2186e-08, -4.37114e-08, -4, 9, -1)
 
 [node name="SmGraybox05" parent="." instance=ExtResource("3_mcmf2")]
-transform = Transform3D(-8.74228e-07, 0, -3, 0, 1, 0, 20, 0, -1.31134e-07, 3, 0, -10)
+transform = Transform3D(12.466, -0.48981, 0, 6.01716, 1.01476, 0, 0, 0, 3, -9, -2, -5)
+
+[node name="SmGraybox09" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(12.466, -0.48981, 0, 6.01716, 1.01476, 0, 0, 0, 3, -9, -2, 2)
+
+[node name="SmGraybox06" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-30, 0, 1.50996e-06, 0, 1, 0, -4.52987e-06, 0, -10, 3.00089, 4.0137, -5.00169)
+
+[node name="SmGraybox08" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(4.32561e-06, 0, 5, 0, 1, 0, -22.216, 0, 9.73536e-07, 3, 4, 9)
+
+[node name="SmGraybox10" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(2.12036e-06, 0, 5, 0, 1, 0, -10.89, 0, 9.73536e-07, -22.9991, 4.0137, 4.99831)
+
+[node name="SmGraybox38" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(7.78829e-07, 0, 1, 0, 7, 0, -4, 0, 1.94707e-07, -18.9991, 5.0137, 8.99831)
+
+[node name="SmGraybox39" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(7.78829e-07, 0, 1, 0, 7, 0, -4, 0, 1.94707e-07, -18.9991, 5.0137, -5.00169)
+
+[node name="SmGraybox83" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(3.11531e-06, 0, 4, 0, 2, 0, -16, 0, 7.78829e-07, 3.00089, 10.0137, 7.99831)
+
+[node name="SmGraybox11" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, 2, 5, -8)
+
+[node name="SmGraybox81" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, 3, 5, -5)
+
+[node name="SmGraybox82" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, 3, 5, 6)
+
+[node name="SmGraybox28" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(7.78829e-07, 0, 4, 0, 12, 0, -4, 0, 7.78829e-07, 3, 0, -8)
+
+[node name="SmGraybox116" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(7.78829e-07, 0, 11.7, 0, 4, 0, -4, 0, 2.27807e-06, -22, 0, 10)
+
+[node name="SmGraybox117" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(7.78829e-07, 0, 11.7, 0, 4, 0, -4, 0, 2.27807e-06, -22, 0, -6)
+
+[node name="SmGraybox118" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(7.78829e-07, 0, 11.7, 0, 4, 0, -4, 0, 2.27807e-06, -22, 0, -6)
+
+[node name="SmGraybox29" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(7.78829e-07, 0, 4, 0, 12, 0, -4, 0, 7.78829e-07, 3, 0, 12)
+
+[node name="SmGraybox12" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -1, 5, -8)
+
+[node name="SmGraybox13" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -4, 5, -8)
+
+[node name="SmGraybox14" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -12, 5, 9)
+
+[node name="SmGraybox15" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -18, 5, 9)
+
+[node name="SmGraybox25" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, -15, 0, -5)
+
+[node name="SmGraybox40" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, -23, 0, -5)
+
+[node name="SmGraybox41" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, -19, 0, -5)
+
+[node name="SmGraybox54" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, -19, 0, -2)
+
+[node name="SmGraybox57" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, -19, 0, 3)
+
+[node name="SmGraybox109" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 6, 0, -1.026, 0, 1.9977e-07, -24, 6, -2)
+
+[node name="SmGraybox110" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 6, 0, -1.026, 0, 1.9977e-07, -24, 6, 3)
+
+[node name="SmGraybox105" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 6, 0, -1.026, 0, 1.9977e-07, -19, 5, -2)
+
+[node name="SmGraybox106" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 6, 0, -1.026, 0, 1.9977e-07, -19, 5, 3)
+
+[node name="SmGraybox27" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, -15, 0, -5)
+
+[node name="SmGraybox26" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, -11, 0, -5)
+
+[node name="SmGraybox42" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, -6, 0, -5)
+
+[node name="SmGraybox43" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, -2, 0, -5)
+
+[node name="SmGraybox44" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, 2, 0, -5)
+
+[node name="SmGraybox46" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, -23, 0, 6)
+
+[node name="SmGraybox47" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, -19, 0, 6)
+
+[node name="SmGraybox48" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, -15, 0, 6)
+
+[node name="SmGraybox49" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, -11, 0, 6)
+
+[node name="SmGraybox73" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-8.14603e-08, 0, -21, 0, 1, 0, 0.5, 0, -3.42133e-06, 3, 5, 5)
+
+[node name="SmGraybox78" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-0.5, 0, 1.50996e-06, 0, 1, 0, -7.54979e-08, 0, -10, -18, 5, 5)
+
+[node name="SmGraybox97" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-0.5, 0, 1.50996e-06, 0, 1, 0, -7.54979e-08, 0, -10, -18, 11, 5)
+
+[node name="SmGraybox98" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-0.5, 0, 1.81195e-06, 0, 1, 0, -7.54979e-08, 0, -12, -23, 11, 6)
+
+[node name="SmGraybox74" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(7.45058e-08, 0, 21, 0, 1, 0, -0.5, 0, 3.8147e-06, -18, 5, -5)
+
+[node name="SmGraybox75" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(0.5, 0, -8.47981e-07, 0, 1, 0, 9.63615e-08, 0, 4.4, 3, 5, -2)
+
+[node name="SmGraybox90" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-1.10543e-07, -0.442852, -10.8972, -5.20574e-08, 0.896594, -5.38242, 0.5, -4.55953e-09, -2.96961e-06, 3, 5, -2)
+
+[node name="SmGraybox91" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-1.10543e-07, -0.442852, -10.8972, -5.20574e-08, 0.896594, -5.38242, 0.5, -4.55953e-09, -2.96961e-06, 3, 5, -5)
+
+[node name="SmGraybox92" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-1.10543e-07, -0.442852, -10.8972, -5.20574e-08, 0.896594, -5.38242, 0.5, -4.55953e-09, -2.96961e-06, 3, 5, 5)
+
+[node name="SmGraybox93" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-1.10543e-07, -0.442852, -10.8972, -5.20574e-08, 0.896594, -5.38242, 0.5, -4.55953e-09, -2.96961e-06, 3, 5, 2)
+
+[node name="SmGraybox50" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, -6, 0, 6)
+
+[node name="SmGraybox51" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, -2, 0, 6)
+
+[node name="SmGraybox52" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, 2, 0, 6)
+
+[node name="SmGraybox71" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.94707e-07, 0, 1, 0, 4, 0, -1, 0, 1.94707e-07, 2, 0, 3)
+
+[node name="SmGraybox94" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.94707e-07, 0, 1, 0, 4, 0, -1, 0, 1.94707e-07, 2, 0, -2)
+
+[node name="SmGraybox45" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 5, 0, -1.026, 0, 1.9977e-07, 2, 0, -5)
+
+[node name="SmGraybox22" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -15, 5, -8)
+
+[node name="SmGraybox58" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-3.17122e-08, 1.73088e-07, 1.026, 0.725491, 3.9598, 0, -0.725491, 3.9598, -4.48479e-08, -18, 11.0402, -8.9598)
+
+[node name="SmGraybox60" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(0, 1.19209e-07, -1.026, 0.725491, 3.9598, 0, 0.725492, -3.9598, -1.19209e-07, -17, 11, 9)
+
+[node name="SmGraybox63" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-3.17122e-08, 1.73088e-07, 1.026, 0.725491, 3.9598, 0, -0.725491, 3.9598, -4.48479e-08, -6, 11.0402, -8.9598)
+
+[node name="SmGraybox64" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(0, 1.19209e-07, -1.026, 0.725491, 3.9598, 9.23702e-17, 0.725492, -3.9598, -1.19209e-07, -5, 11, 9)
+
+[node name="SmGraybox65" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-3.17122e-08, 1.73088e-07, 1.026, 0.725491, 3.9598, 0, -0.725491, 3.9598, -4.48479e-08, -1.73088e-07, 11.0402, -8.9598)
+
+[node name="SmGraybox66" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(0, 1.19209e-07, -1.026, 0.725491, 3.9598, 9.23702e-17, 0.725492, -3.9598, -1.19209e-07, 1, 11, 9)
+
+[node name="SmGraybox61" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-3.17122e-08, 1.73088e-07, 1.026, 0.725491, 3.9598, 0, -0.725491, 3.9598, -4.48479e-08, -12, 11.0402, -8.9598)
+
+[node name="SmGraybox62" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(0, 1.19209e-07, -1.026, 0.725491, 3.9598, 0, 0.725492, -3.9598, -1.19209e-07, -11, 11, 9)
+
+[node name="SmGraybox59" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-4.48479e-08, 5.24537e-07, 1, 1.026, -5.24537e-07, 4.37114e-08, 4.48479e-08, 12, -4.37114e-08, -18, 15, -6)
+
+[node name="SmGraybox76" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-4.48479e-08, 5.24537e-07, 1, 1.026, -5.24537e-07, 4.37114e-08, 4.48479e-08, 12, -4.37114e-08, -12, 15, -6)
+
+[node name="SmGraybox70" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-4.48479e-08, 5.24537e-07, 1, 1.026, -5.24537e-07, 4.37114e-08, 4.48479e-08, 12, -4.37114e-08, -6, 15, -6)
+
+[node name="SmGraybox69" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-4.48479e-08, 5.24537e-07, 1, 1.026, -5.24537e-07, 4.37114e-08, 4.48479e-08, 12, -4.37114e-08, 0, 15, -6)
+
+[node name="SmGraybox77" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-4.48479e-08, 4.37114e-08, 20, 1.026, -4.37114e-08, 8.74227e-07, 4.48479e-08, 1, -8.74228e-07, -17, 15, -6)
+
+[node name="SmGraybox85" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-4.48479e-08, 4.37114e-08, 20, 1.026, -4.37114e-08, 8.74227e-07, 4.48479e-08, 1, -8.74228e-07, -17, 15, 5)
+
+[node name="SmGraybox23" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -7, 5, -8)
+
+[node name="SmGraybox17" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -1, 5, 9)
+
+[node name="SmGraybox30" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -4, 5, 9)
+
+[node name="SmGraybox31" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -12, 5, -8)
+
+[node name="SmGraybox32" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -18, 5, -8)
+
+[node name="SmGraybox33" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -15, 5, 9)
+
+[node name="SmGraybox34" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -7, 5, 9)
+
+[node name="SmGraybox67" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -12, 9, 9)
+
+[node name="SmGraybox68" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -18, 9, 9)
+
+[node name="SmGraybox86" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -1, 9, 9)
+
+[node name="SmGraybox87" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -4, 9, 9)
+
+[node name="SmGraybox88" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -15, 9, 9)
+
+[node name="SmGraybox89" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -7, 9, 9)
+
+[node name="SmGraybox16" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -24, 5, -8)
+
+[node name="SmGraybox18" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-6.51683e-07, -4.27289e-14, 30, -3.49691e-07, 3, 0, 4, 2.62268e-07, 4.88762e-06, -27, 9, -12)
+
+[node name="SmGraybox03" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(13.2, 0, 0, 0, 12, 0, 0, 0, 1, -24, 0, 12)
+
+[node name="SmGraybox35" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(13.2, 0, 0, 0, 12, 0, 0, 0, 1, -7, 0, 12)
+
+[node name="SmGraybox19" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-6.51683e-07, -4.27289e-14, 30, -3.49691e-07, 3, 0, 4, 2.62268e-07, 4.88762e-06, -27, 9, 8)
+
+[node name="SmGraybox37" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(1.9977e-07, 0, 1.026, 0, 4, 0, -1.026, 0, 1.9977e-07, -24, 5, 9)
+
+[node name="SmGraybox07" parent="." instance=ExtResource("3_mcmf2")]
+transform = Transform3D(-30, 0, 1.20797e-06, 0, 1, 0, -4.52987e-06, 0, -8, 3.00089, 4.0137, 12.9983)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.6, 0, 0, 0, 4.9, 0, 0, 0, 1, -8.04742, 1.69816, -9.51414)
+mesh = SubResource("BoxMesh_idrt8")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("4_fdxky")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.6, 0, 0, 0, 4.9, 0, 0, 0, 1, -8.67325, 6.70745, -13.4748)
+mesh = SubResource("BoxMesh_idrt8")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("4_fdxky")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.81501e-07, 0, -1, 0, 15.19, 0, 6.44, 0, -4.37114e-08, 8.32675, 3.70745, -0.474799)
+mesh = SubResource("BoxMesh_idrt8")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("4_fdxky")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.81501e-07, 0, -1, 0, 6.076, 0, 6.44, 0, -4.37114e-08, -23.6733, 1.70745, 0.525201)
+mesh = SubResource("BoxMesh_idrt8")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("4_fdxky")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.6, 0, 0, 0, 4.9, 0, 0, 0, 1, -8.0307, 1.71594, 9.47865)
+mesh = SubResource("BoxMesh_idrt8")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("4_fdxky")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.6, 0, 0, 0, 4.9, 0, 0, 0, 1, -8.65653, 6.72522, 13.518)
+mesh = SubResource("BoxMesh_idrt8")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("4_fdxky")
