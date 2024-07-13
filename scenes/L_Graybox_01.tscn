@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cj5lx67nii1jn"]
 
-[ext_resource type="Material" path="res://assets/Materials/M_Grid_02.tres" id="1_k6v1i"]
+[ext_resource type="Material" uid="uid://d27ed7e4kht3q" path="res://assets/Materials/M_Grid_02.tres" id="1_k6v1i"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_ay16e"]
 [ext_resource type="PackedScene" uid="uid://sp8cq7x6nlbq" path="res://assets/assets/sm_graybox_01.tscn" id="3_mcmf2"]
 [ext_resource type="Material" uid="uid://dkt8eithptht8" path="res://assets/Materials/M_Grid_03.tres" id="4_fdxky"]
