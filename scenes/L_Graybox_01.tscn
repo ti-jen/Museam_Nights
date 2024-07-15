@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://cj5lx67nii1jn"]
 
 [ext_resource type="Shader" path="res://shaders/ps1_post.gdshader" id="1_0pjab"]
-[ext_resource type="Material" uid="uid://d27ed7e4kht3q" path="res://assets/Materials/M_Grid_02.tres" id="1_k6v1i"]
+[ext_resource type="Material" path="res://assets/Materials/M_Grid_02.tres" id="1_k6v1i"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_ay16e"]
 [ext_resource type="PackedScene" uid="uid://sp8cq7x6nlbq" path="res://assets/assets/sm_graybox_01.tscn" id="3_mcmf2"]
 [ext_resource type="Material" uid="uid://dkt8eithptht8" path="res://assets/Materials/M_Grid_03.tres" id="4_fdxky"]
@@ -45,7 +45,9 @@ offset_right = 644.0
 offset_bottom = 485.0
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
 size = Vector2i(640, 480)
+render_target_update_mode = 4
 
 [node name="stage" type="Node3D" parent="SubViewportContainer/SubViewport"]
 

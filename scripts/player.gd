@@ -2,11 +2,11 @@ extends CharacterBody3D
 
 @onready var head = $head
 
-var current_speed = 2.5
+var current_speed = 4
 
-const walking_speed = 2.5
-const sprinting_speed = 5
-const crouching_speed = 1
+const walking_speed = 4
+const sprinting_speed = 7
+const crouching_speed = 2.5
 
 const jump_velocity = 4.5
 
