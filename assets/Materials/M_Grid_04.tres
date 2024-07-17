@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bcdr327xd7a4a"]
+
+[ext_resource type="Texture2D" uid="uid://ujh72cv8xyd7" path="res://assets/textures/T_Graybox_01.tga" id="1_5h0h6"]
+
+[resource]
+albedo_color = Color(0.47451, 0.85098, 0, 1)
+albedo_texture = ExtResource("1_5h0h6")
+uv1_triplanar = true
+uv1_world_triplanar = true
