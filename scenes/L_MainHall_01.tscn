@@ -29,7 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://bq563yhvcs60" path="res://assets/main_hall_assets/sm_roof_wall_01.glb" id="27_h0qnh"]
 [ext_resource type="PackedScene" uid="uid://dx00qa26lj7gy" path="res://assets/main_hall_assets/sm_floor_wall_01.glb" id="28_s6o4v"]
 [ext_resource type="PackedScene" uid="uid://cfdcqhawblf3w" path="res://assets/main_hall_assets/sm_floor_wall_02.glb" id="29_olti6"]
-[ext_resource type="PackedScene" uid="uid://dhocyl4ulragf" path="res://assets/main_hall_assets/sm_floor_wall_03.glb" id="30_jjpbx"]
+[ext_resource type="PackedScene" uid="uid://ry6c86whj26b" path="res://assets/main_hall_assets/sm_floor_wall_03.glb" id="30_jjpbx"]
 [ext_resource type="PackedScene" uid="uid://v0mn7w2wwdbo" path="res://assets/main_hall_assets/sm_stairs_wall_02.glb" id="31_2q4bm"]
 [ext_resource type="PackedScene" uid="uid://bch03qe17co1m" path="res://assets/main_hall_assets/sm_stairs_wall_03.glb" id="32_4gv45"]
 
@@ -54,8 +54,8 @@ background_mode = 2
 background_color = Color(1, 1, 1, 1)
 sky = SubResource("Sky_ldh54")
 ambient_light_source = 2
-ambient_light_color = Color(0.466667, 0.435294, 0.47451, 1)
-ambient_light_energy = 0.6
+ambient_light_color = Color(0.639216, 0.819608, 1, 1)
+ambient_light_energy = 0.3
 tonemap_mode = 2
 glow_enabled = true
 
@@ -98,12 +98,10 @@ material = ExtResource("2_gr55g")
 environment = SubResource("Environment_tyb8y")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport/env"]
-transform = Transform3D(0.806784, -0.543977, 0.230626, -0.116043, 0.236845, 0.964592, -0.579338, -0.804981, 0.127958, 3, 11.0832, 16)
+transform = Transform3D(0.979832, -0.13176, 0.150229, -0.116043, 0.236845, 0.964592, -0.162676, -0.962571, 0.216778, 3, 11.0832, 16)
 light_color = Color(0.662745, 0.956863, 1, 1)
 light_energy = 2.0
 shadow_enabled = true
-shadow_bias = 0.0
-shadow_blur = 0.0
 
 [node name="player" type="CharacterBody3D" parent="SubViewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.55735, 9)
@@ -906,7 +904,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 22, 8,
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 22, 16, 12)
 
 [node name="sm_railing_wall_022" parent="." instance=ExtResource("20_c7at6")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, 8, -2)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.2399, 8, -2)
 
 [node name="sm_railing_wall_023" parent="." instance=ExtResource("20_c7at6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, 8, 11)
@@ -957,9 +955,16 @@ light_energy = 4.705
 spot_angle = 82.3351
 
 [node name="SpotLight3D11" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -5, 7, -12)
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -5, 6.22749, -12)
 light_color = Color(1, 0.905882, 0.690196, 1)
 light_energy = 4.705
+spot_angle = 82.3351
+
+[node name="SpotLight3D46" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.297459, -0.78067, 0.549611, 0.879458, -5.9248e-08, 0.475977, -0.371581, 0.624943, 0.686567, -11.0521, 7.25083, -0.906546)
+light_color = Color(1, 0.905882, 0.690196, 1)
+light_energy = 4.705
+spot_range = 10.1955
 spot_angle = 82.3351
 
 [node name="SpotLight3D12" type="SpotLight3D" parent="."]

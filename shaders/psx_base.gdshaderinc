@@ -1,4 +1,4 @@
-render_mode LIT, CULL, shadows_disabled, DEPTH, BLEND, specular_disabled;
+render_mode LIT, CULL, DEPTH, BLEND, specular_disabled;
 
 global uniform float precision_multiplier : hint_range(0.0, 1.0) = 1.0;
 uniform vec4 modulate_color : source_color = vec4(1.0);
@@ -20,7 +20,7 @@ uniform float alpha_scissor : hint_range(0, 1) = 0.1;
 #endif
 
 // https://github.com/dsoft20/psx_retroshader/blob/master/Assets/Shaders/psx-vertexlit.shader
-const vec2 base_snap_res = vec2(160.0, 120.0);
+const vec2 base_snap_res = vec2(260.0, 220.0);
 vec4 get_snapped_pos(vec4 base_pos)
 {
 	vec4 snapped_pos = base_pos;
