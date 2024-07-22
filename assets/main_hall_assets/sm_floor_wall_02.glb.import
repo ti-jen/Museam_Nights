@@ -33,7 +33,7 @@ _subresources={
 "materials": {
 "M_Grid_04": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/Materials/M_Grid_04.tres"
+"use_external/path": "res://assets/Materials/M_test.tres"
 }
 }
 }
