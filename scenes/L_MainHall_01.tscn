@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://ng2biuw87487" path="res://assets/main_hall_assets/sm_pillar_wall_01.glb" id="12_vewrf"]
 [ext_resource type="PackedScene" uid="uid://xfb77iu2ypuh" path="res://assets/main_hall_assets/sm_wall_wall_01.glb" id="14_ktst3"]
 [ext_resource type="PackedScene" uid="uid://wslpxi0wtuxs" path="res://assets/main_hall_assets/sm_wall_wall_02.glb" id="15_yi7at"]
-[ext_resource type="PackedScene" uid="uid://bddndwl5bjllg" path="res://assets/main_hall_assets/sm_doorway_wall_01.glb" id="16_ec2p6"]
 [ext_resource type="PackedScene" uid="uid://bc0xjdq37oj7t" path="res://assets/main_hall_assets/sm_stairs_wall_01.glb" id="17_ofkah"]
 [ext_resource type="PackedScene" uid="uid://cs3yaxa67f074" path="res://assets/main_hall_assets/sm_arch_wall_03.glb" id="18_owvy7"]
 [ext_resource type="PackedScene" uid="uid://cuqp8df8fw43n" path="res://assets/main_hall_assets/sm_railing_wall_01.glb" id="19_3j7mq"]
@@ -30,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://cfdcqhawblf3w" path="res://assets/main_hall_assets/sm_floor_wall_02.glb" id="29_olti6"]
 [ext_resource type="PackedScene" uid="uid://ry6c86whj26b" path="res://assets/main_hall_assets/sm_pillar_corner_wall_01.glb" id="30_jjpbx"]
 [ext_resource type="PackedScene" uid="uid://v0mn7w2wwdbo" path="res://assets/main_hall_assets/sm_stairs_wall_02.glb" id="31_2q4bm"]
+[ext_resource type="PackedScene" uid="uid://dhocyl4ulragf" path="res://assets/main_hall_assets/sm_floor_wall_03.glb" id="31_pwwx6"]
 [ext_resource type="PackedScene" uid="uid://bch03qe17co1m" path="res://assets/main_hall_assets/sm_stairs_wall_03.glb" id="32_4gv45"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k787c"]
@@ -53,8 +53,7 @@ background_mode = 2
 background_color = Color(1, 1, 1, 1)
 sky = SubResource("Sky_ldh54")
 ambient_light_source = 2
-ambient_light_color = Color(0.639216, 0.819608, 1, 1)
-ambient_light_energy = 0.3
+ambient_light_color = Color(0.278431, 0.321569, 0.4, 1)
 tonemap_mode = 2
 glow_enabled = true
 
@@ -174,6 +173,7 @@ mesh = ExtResource("7_4pko2")
 [node name="StaticBody3D" type="StaticBody3D" parent="WhaleRef"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WhaleRef/StaticBody3D"]
+transform = Transform3D(1, -6.66134e-16, 3.55271e-15, 6.66134e-15, 1, 1.49012e-07, -3.55271e-15, -1.49012e-07, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_twxd2")
 
 [node name="statue_02" parent="." instance=ExtResource("8_bbt70")]
@@ -675,7 +675,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25, 8
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25, 0, -7)
 
 [node name="sm_wall_wall_023" parent="." instance=ExtResource("14_ktst3")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17, 0, -16)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.0082, 9.53674e-07, -15.9848)
 
 [node name="sm_wall_wall_020" parent="." instance=ExtResource("14_ktst3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, -16)
@@ -767,19 +767,19 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 8,
 [node name="sm_wall_wall_049" parent="." instance=ExtResource("15_yi7at")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 8, 11)
 
-[node name="sm_doorway_wall_012" parent="." instance=ExtResource("16_ec2p6")]
+[node name="sm_doorway_wall_012" parent="." instance=ExtResource("28_s6o4v")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -30, 0, 6)
 
-[node name="sm_doorway_wall_017" parent="." instance=ExtResource("16_ec2p6")]
+[node name="sm_doorway_wall_017" parent="." instance=ExtResource("28_s6o4v")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 16, 13)
 
-[node name="sm_doorway_wall_018" parent="." instance=ExtResource("16_ec2p6")]
+[node name="sm_doorway_wall_018" parent="." instance=ExtResource("28_s6o4v")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 16, -1)
 
-[node name="sm_doorway_wall_013" parent="." instance=ExtResource("16_ec2p6")]
+[node name="sm_doorway_wall_013" parent="." instance=ExtResource("28_s6o4v")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15, 8, 20)
 
-[node name="sm_doorway_wall_014" parent="." instance=ExtResource("16_ec2p6")]
+[node name="sm_doorway_wall_014" parent="." instance=ExtResource("28_s6o4v")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 8, 20)
 
 [node name="sm_wall_wall_044" parent="." instance=ExtResource("14_ktst3")]
@@ -818,10 +818,10 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 31, 16
 [node name="sm_wall_wall_048" parent="." instance=ExtResource("14_ktst3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17, 8, -16)
 
-[node name="sm_doorway_wall_015" parent="." instance=ExtResource("16_ec2p6")]
+[node name="sm_doorway_wall_015" parent="." instance=ExtResource("28_s6o4v")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15, 8, -16)
 
-[node name="sm_doorway_wall_016" parent="." instance=ExtResource("16_ec2p6")]
+[node name="sm_doorway_wall_016" parent="." instance=ExtResource("28_s6o4v")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 8, -16)
 
 [node name="sm_stairs_wall_012" parent="." instance=ExtResource("17_ofkah")]
@@ -959,7 +959,18 @@ spot_angle = 82.3351
 [node name="SpotLight3D46" type="SpotLight3D" parent="."]
 transform = Transform3D(-0.297459, -0.78067, 0.549611, 0.879458, -5.9248e-08, 0.475977, -0.371581, 0.624943, 0.686567, -11.0521, 7.25083, -0.906546)
 light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
+light_energy = 4.17
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+spot_range = 10.1955
+spot_angle = 82.3351
+
+[node name="SpotLight3D47" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.435908, 0.401597, 0.805422, 0.879458, -3.47557e-07, 0.475977, 0.191151, 0.915817, -0.353187, -11.0521, 7.25083, 7.09345)
+light_color = Color(1, 0.905882, 0.690196, 1)
+light_energy = 4.17
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
 spot_range = 10.1955
 spot_angle = 82.3351
 
@@ -1477,3 +1488,21 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 15, 8,
 
 [node name="sm_stairs_wall_032" parent="." instance=ExtResource("32_4gv45")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 12, 5)
+
+[node name="sm_floor_wall_03" parent="." instance=ExtResource("31_pwwx6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 8, -2)
+
+[node name="sm_floor_wall_04" parent="." instance=ExtResource("31_pwwx6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 8, 11)
+
+[node name="sm_floor_wall_05" parent="." instance=ExtResource("31_pwwx6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 8, -2)
+
+[node name="sm_floor_wall_06" parent="." instance=ExtResource("31_pwwx6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 8, 11)
+
+[node name="sm_floor_wall_07" parent="." instance=ExtResource("31_pwwx6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 16, -2)
+
+[node name="sm_floor_wall_08" parent="." instance=ExtResource("31_pwwx6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 16, 11)

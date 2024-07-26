@@ -31,9 +31,13 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"M_Grid_04": {
+"floor": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/Materials/M_Grid_04.tres"
+"use_external/path": "res://assets/Materials/M_Groundtiles_01 .tres"
+},
+"sealing": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/Materials/M_Groundtiles_02 .tres"
 }
 }
 }
