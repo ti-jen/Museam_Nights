@@ -31,9 +31,13 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"M_Grid_04": {
+"M_Grid_04.002": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/Materials/M_Grid_04.tres"
+"use_external/path": "res://assets/Materials/M_Groundtiles_tempp .tres"
+},
+"pattern": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/Materials/M_archtrim_01.tres"
 }
 }
 }

@@ -53,7 +53,7 @@ background_mode = 2
 background_color = Color(1, 1, 1, 1)
 sky = SubResource("Sky_ldh54")
 ambient_light_source = 2
-ambient_light_color = Color(0.278431, 0.321569, 0.4, 1)
+ambient_light_color = Color(0.25098, 0.278431, 0.431373, 1)
 tonemap_mode = 2
 glow_enabled = true
 
@@ -96,9 +96,9 @@ material = ExtResource("2_kgnhm")
 environment = SubResource("Environment_tyb8y")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport/env"]
-transform = Transform3D(0.979832, -0.13176, 0.150229, -0.116043, 0.236845, 0.964592, -0.162676, -0.962571, 0.216778, 3, 11.0832, 16)
-light_color = Color(0.662745, 0.956863, 1, 1)
-light_energy = 2.0
+transform = Transform3D(0.979832, -0.13176, 0.150229, -0.116043, 0.236845, 0.964592, -0.162676, -0.962571, 0.216779, 3, 11.0832, 16)
+light_color = Color(0.85098, 0.741176, 1, 1)
+light_energy = 0.5
 shadow_enabled = true
 
 [node name="player" type="CharacterBody3D" parent="SubViewportContainer/SubViewport"]
@@ -136,20 +136,8 @@ transform = Transform3D(-8.74228e-08, 0, 5, 0, 4.9, 0, -2, 0, -2.18557e-07, -7, 
 [node name="SmGraybox36" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
 transform = Transform3D(-1.64203e-15, -1.63918e-06, 1, -1, -1.63918e-06, -3.55271e-15, 4.37114e-08, -37.5, -4.37114e-08, 32, 7, 20)
 
-[node name="SmGraybox40" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
-transform = Transform3D(1, 0, 0, 0, -3.0598e-07, 1, 0, -7, -4.37114e-08, -1, 6, -8)
-
-[node name="SmGraybox41" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
-transform = Transform3D(1, 0, 0, 0, -3.0598e-07, 1, 0, -7, -4.37114e-08, 7, 6, -8)
-
 [node name="SmGraybox42" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
 transform = Transform3D(1, 0, 0, 0, -3.0598e-07, 1, 0, -7, -4.37114e-08, 15, 6, -8)
-
-[node name="SmGraybox46" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
-transform = Transform3D(1, 0, 0, 0, -3.0598e-07, 1, 0, -7, -4.37114e-08, -1, 6, 20)
-
-[node name="SmGraybox47" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
-transform = Transform3D(1, 0, 0, 0, -3.0598e-07, 1, 0, -7, -4.37114e-08, 7, 6, 20)
 
 [node name="SmGraybox105" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
 transform = Transform3D(7, 0, 0, 0, 2, 0, 0, 0, 2, -8, -1, 1)
@@ -632,6 +620,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 16, -8)
 [node name="sm_wall_wall_012" parent="." instance=ExtResource("14_ktst3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 0, 20)
 
+[node name="sm_wall_wall_065" parent="." instance=ExtResource("14_ktst3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 8, 20)
+
 [node name="sm_wall_wall_013" parent="." instance=ExtResource("14_ktst3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, 20)
 
@@ -654,6 +645,12 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 31, 8,
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15, 0, 20)
 
 [node name="sm_wall_wall_019" parent="." instance=ExtResource("14_ktst3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 0, -16)
+
+[node name="sm_wall_wall_063" parent="." instance=ExtResource("14_ktst3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 8, -16)
+
+[node name="sm_wall_wall_064" parent="." instance=ExtResource("14_ktst3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 0, -16)
 
 [node name="sm_wall_wall_022" parent="." instance=ExtResource("14_ktst3")]
@@ -951,9 +948,10 @@ light_energy = 4.705
 spot_angle = 82.3351
 
 [node name="SpotLight3D11" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -5, 6.22749, -12)
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0.258819, 3.09086e-08, -0.965926, 0.965926, -5.35353e-08, 0.258819, -5, 2.22749, -9)
 light_color = Color(1, 0.905882, 0.690196, 1)
 light_energy = 4.705
+shadow_enabled = true
 spot_angle = 82.3351
 
 [node name="SpotLight3D46" type="SpotLight3D" parent="."]
