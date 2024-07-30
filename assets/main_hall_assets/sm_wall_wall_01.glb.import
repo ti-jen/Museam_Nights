@@ -33,7 +33,7 @@ _subresources={
 "materials": {
 "M_Grid_04.002": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/Materials/M_Groundtiles_tempp .tres"
+"use_external/path": "res://assets/Materials/M_stoneWalls_01.tres"
 },
 "pattern": {
 "use_external/enabled": true,
