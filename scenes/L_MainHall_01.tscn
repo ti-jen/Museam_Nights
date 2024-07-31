@@ -26,10 +26,10 @@
 [ext_resource type="PackedScene" uid="uid://b075l2ykm4q82" path="res://assets/main_hall_assets/sm_wall_wall_03.glb" id="26_ghg0o"]
 [ext_resource type="PackedScene" uid="uid://bq563yhvcs60" path="res://assets/main_hall_assets/sm_roof_wall_01.glb" id="27_h0qnh"]
 [ext_resource type="PackedScene" uid="uid://dx00qa26lj7gy" path="res://assets/main_hall_assets/sm_floor_wall_01.glb" id="28_s6o4v"]
-[ext_resource type="PackedScene" uid="uid://cfdcqhawblf3w" path="res://assets/main_hall_assets/sm_floor_wall_02.glb" id="29_olti6"]
 [ext_resource type="PackedScene" uid="uid://v0mn7w2wwdbo" path="res://assets/main_hall_assets/sm_stairs_wall_02.glb" id="31_2q4bm"]
 [ext_resource type="PackedScene" uid="uid://ry6c86whj26b" path="res://assets/main_hall_assets/sm_pillar_corner_wall_01.glb" id="31_pwwx6"]
 [ext_resource type="PackedScene" uid="uid://bch03qe17co1m" path="res://assets/main_hall_assets/sm_stairs_wall_03.glb" id="32_4gv45"]
+[ext_resource type="PackedScene" uid="uid://okoasu5ok7t6" path="res://assets/assets/sm_floor.tscn" id="32_tebg2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k787c"]
 shader = ExtResource("1_411dw")
@@ -52,7 +52,8 @@ background_mode = 2
 background_color = Color(1, 1, 1, 1)
 sky = SubResource("Sky_ldh54")
 ambient_light_source = 2
-ambient_light_color = Color(0.25098, 0.278431, 0.431373, 1)
+ambient_light_color = Color(0.231373, 0.172549, 0.431373, 1)
+ambient_light_energy = 2.0
 tonemap_mode = 2
 glow_enabled = true
 
@@ -96,7 +97,7 @@ environment = SubResource("Environment_tyb8y")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport/env"]
 transform = Transform3D(0.979832, -0.13176, 0.150229, -0.116043, 0.236845, 0.964592, -0.162676, -0.962571, 0.216779, 3, 11.0832, 16)
-light_color = Color(0.85098, 0.741176, 1, 1)
+light_color = Color(0.807843, 0.670588, 1, 1)
 light_energy = 0.5
 shadow_enabled = true
 
@@ -120,23 +121,26 @@ transform = Transform3D(-8.74228e-08, 0, 5, 0, 4.9, 0, -2, 0, -2.18557e-07, 1, 8
 [node name="SmGraybox173" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
 transform = Transform3D(-8.74228e-08, 0, 5, 0, 4.9, 0, -2, 0, -2.18557e-07, -7, 8, 20)
 
+[node name="SmGraybox176" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
+transform = Transform3D(-8.74228e-08, 0, 5, 0, 4.9, 0, -2, 0, -2.18557e-07, 25, 8, 20)
+
+[node name="SmGraybox177" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
+transform = Transform3D(-8.74228e-08, 0, 5, 0, 4.9, 0, -2, 0, -2.18557e-07, 17, 8, 20)
+
 [node name="SmGraybox174" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
 transform = Transform3D(-8.74228e-08, 0, 5, 0, 4.9, 0, -2, 0, -2.18557e-07, 1, 8, -13)
 
 [node name="SmGraybox196" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
-transform = Transform3D(-2, 0, -4.37114e-07, 0, 4.9, 0, 1.74846e-07, 0, -5, 31, 8, 19)
+transform = Transform3D(-2, 0, -4.37114e-07, 0, 4.9, 0, 1.74846e-07, 0, -5, 33, 8, 19)
+
+[node name="SmGraybox197" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
+transform = Transform3D(-2, 0, -4.37114e-07, 0, 4.9, 0, 1.74846e-07, 0, -5, 33, 8, 19)
 
 [node name="SmGraybox198" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
 transform = Transform3D(-2, 0, -4.37114e-07, 0, 4.9, 0, 1.74846e-07, 0, -5, 31, 16, 5)
 
 [node name="SmGraybox175" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
 transform = Transform3D(-8.74228e-08, 0, 5, 0, 4.9, 0, -2, 0, -2.18557e-07, -7, 8, -13)
-
-[node name="SmGraybox36" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
-transform = Transform3D(-1.64203e-15, -1.63918e-06, 1, -1, -1.63918e-06, -3.55271e-15, 4.37114e-08, -37.5, -4.37114e-08, 32, 7, 20)
-
-[node name="SmGraybox42" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
-transform = Transform3D(1, 0, 0, 0, -3.0598e-07, 1, 0, -7, -4.37114e-08, 15, 6, -8)
 
 [node name="SmGraybox105" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_iwqcg")]
 transform = Transform3D(7, 0, 0, 0, 2, 0, 0, 0, 2, -8, -1, 1)
@@ -188,7 +192,7 @@ transform = Transform3D(-2.46173e-07, 0, 2.1, 0, 2.1, 0, -2.1, 0, -2.46173e-07, 
 transform = Transform3D(-2.46173e-07, 0, 2.1, 0, 2.1, 0, -2.1, 0, -2.46173e-07, -5, 1.55, 16)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.81501e-07, 0, -1, 0, 9.8, 0, 6.44, 0, -4.37114e-08, 24.4748, 2.4149, 2.28725)
+transform = Transform3D(-3.94101e-07, 0, -1, 0, 9.8, 0, 9.016, 0, -4.37114e-08, 25.4748, 2.4149, 2.28725)
 mesh = SubResource("BoxMesh_fywqo")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("5_87c1p")
@@ -200,7 +204,7 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("5_87c1p")
 
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.81501e-07, 0, -1, 0, 9.8, 0, 6.44, 0, -4.37114e-08, 32.4748, 9.4149, 2.28725)
+transform = Transform3D(-5.06702e-07, 0, -1, 0, 9.8, 0, 11.592, 0, -4.37114e-08, 33.4748, 9.4149, 2.28725)
 mesh = SubResource("BoxMesh_fywqo")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("5_87c1p")
@@ -218,13 +222,13 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("5_87c1p")
 
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="."]
-transform = Transform3D(4.508, 0, 0, 0, 5.88, 0, -7.95808e-14, 0, 1, 11.4748, 10.4149, -15.7128)
+transform = Transform3D(9.016, 0, 0, 0, 11.172, 0, -1.59162e-13, 0, 1, 12.4748, 10.4149, -15.7128)
 mesh = SubResource("BoxMesh_fywqo")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("5_87c1p")
 
 [node name="MeshInstance3D10" type="MeshInstance3D" parent="."]
-transform = Transform3D(4.508, 0, 0, 0, 5.88, 0, -7.95808e-14, 0, 1, 11.4748, 10.4149, 21.2872)
+transform = Transform3D(8.1144, 0, 0, 0, 8.232, 0, -1.43245e-13, 0, 1, 11.4748, 10.4149, 21.2872)
 mesh = SubResource("BoxMesh_fywqo")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("5_87c1p")
@@ -299,37 +303,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -7)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, 0, 6)
 
 [node name="sm_arch_wall_030" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24, 0, 6)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 0, 6)
 
 [node name="sm_arch_wall_045" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 8, 6)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33, 8, 6)
 
 [node name="sm_arch_wall_043" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 24, 8, 12)
-
-[node name="sm_arch_wall_080" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 24, 0, 12)
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 25, 8, 12)
 
 [node name="sm_arch_wall_044" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 24, 8, -6)
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 25, 8, -6)
 
 [node name="sm_arch_wall_070" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 24, 16, -6)
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 25, 16, -6)
 
 [node name="sm_arch_wall_071" parent="." instance=ExtResource("10_iai3x")]
 transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 24, 16, 12)
 
 [node name="sm_arch_wall_067" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 24, 8, -1)
-
-[node name="sm_arch_wall_081" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 24, 0, -6)
-
-[node name="sm_arch_wall_082" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 24, 0, -1)
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 25, 8, -1)
 
 [node name="sm_arch_wall_068" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 24, 8, 7)
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 25, 8, 7)
 
 [node name="sm_arch_wall_086" parent="." instance=ExtResource("10_iai3x")]
 transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 24, 16, -1)
@@ -337,14 +332,11 @@ transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 24, 16, 
 [node name="sm_arch_wall_087" parent="." instance=ExtResource("10_iai3x")]
 transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 24, 16, 7)
 
-[node name="sm_arch_wall_076" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 24, 0, -1)
-
-[node name="sm_arch_wall_077" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 24, 0, 7)
-
 [node name="sm_arch_wall_028" parent="." instance=ExtResource("10_iai3x")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25, 0, 6)
+
+[node name="sm_arch_wall_076" parent="." instance=ExtResource("10_iai3x")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -30, 0, 6)
 
 [node name="sm_arch_wall_015" parent="." instance=ExtResource("10_iai3x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13)
@@ -353,7 +345,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 8, 13)
 
 [node name="sm_arch_wall_083" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24, 16, 6)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 16, 6)
 
 [node name="sm_arch_wall_061" parent="." instance=ExtResource("10_iai3x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 8, -7)
@@ -385,14 +377,14 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 8, 
 [node name="sm_arch_wall_035" parent="." instance=ExtResource("10_iai3x")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 8, 13)
 
+[node name="sm_arch_wall_074" parent="." instance=ExtResource("10_iai3x")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 15, 8, 20)
+
 [node name="sm_arch_wall_075" parent="." instance=ExtResource("10_iai3x")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 0, 13)
 
 [node name="sm_arch_wall_036" parent="." instance=ExtResource("10_iai3x")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 8, 13)
-
-[node name="sm_arch_wall_079" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 0, 13)
 
 [node name="sm_arch_wall_037" parent="." instance=ExtResource("10_iai3x")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -17, 8, -15)
@@ -409,14 +401,8 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 8, 
 [node name="sm_arch_wall_041" parent="." instance=ExtResource("10_iai3x")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 8, -15)
 
-[node name="sm_arch_wall_074" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 0, -15)
-
 [node name="sm_arch_wall_042" parent="." instance=ExtResource("10_iai3x")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 8, -15)
-
-[node name="sm_arch_wall_078" parent="." instance=ExtResource("10_iai3x")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 0, -15)
 
 [node name="sm_arch_wall_024" parent="." instance=ExtResource("10_iai3x")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -18, 0, 11)
@@ -443,10 +429,10 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -17, 0
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, 0, -2)
 
 [node name="sm_arch_wall_047" parent="." instance=ExtResource("11_bybug")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24, 8, -2)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 8, -2)
 
 [node name="sm_arch_wall_048" parent="." instance=ExtResource("11_bybug")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24, 8, 11)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 8, 11)
 
 [node name="sm_arch_wall_023" parent="." instance=ExtResource("11_bybug")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, 0, 11)
@@ -470,10 +456,16 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -18, 8
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, 8, -2)
 
 [node name="sm_arch_wall_084" parent="." instance=ExtResource("11_bybug")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24, 16, -2)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 16, -2)
 
 [node name="sm_arch_wall_085" parent="." instance=ExtResource("11_bybug")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24, 16, 11)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 16, 11)
+
+[node name="sm_arch_wall_088" parent="." instance=ExtResource("11_bybug")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 16, -2)
+
+[node name="sm_arch_wall_089" parent="." instance=ExtResource("11_bybug")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 16, 11)
 
 [node name="sm_arch_wall_060" parent="." instance=ExtResource("11_bybug")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, 8, 11)
@@ -482,22 +474,22 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, 8
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18, 0, -1)
 
 [node name="sm_pillar_wall_032" parent="." instance=ExtResource("12_vewrf")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 24, 0, -2)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 25, 0, -2)
 
 [node name="sm_pillar_wall_033" parent="." instance=ExtResource("12_vewrf")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 24, 8, -2)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 25, 8, -2)
 
 [node name="sm_pillar_wall_034" parent="." instance=ExtResource("12_vewrf")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 24, 0, 6)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 25, 0, 6)
 
 [node name="sm_pillar_wall_035" parent="." instance=ExtResource("12_vewrf")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 24, 8, 6)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 25, 8, 6)
 
 [node name="sm_pillar_wall_055" parent="." instance=ExtResource("12_vewrf")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 24, 16, -2)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 25, 16, -2)
 
 [node name="sm_pillar_wall_056" parent="." instance=ExtResource("12_vewrf")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 24, 16, 6)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 25, 16, 6)
 
 [node name="sm_pillar_wall_013" parent="." instance=ExtResource("12_vewrf")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18, 8, -1)
@@ -569,22 +561,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -8)
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -18, 0, 13)
 
 [node name="sm_pillar_corner_wall_018" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(-1, 0, -4.37114e-08, 0, 1, 0, 4.37114e-08, 0, -1, 24, 0, 13)
+transform = Transform3D(-1, 0, -4.37114e-08, 0, 1, 0, 4.37114e-08, 0, -1, 25, 0, 13)
 
 [node name="sm_pillar_corner_wall_021" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(8.74228e-08, 0, -1, 0, 1, 0, 1, 0, 8.74228e-08, 24, 0, -8)
+transform = Transform3D(8.74228e-08, 0, -1, 0, 1, 0, 1, 0, 8.74228e-08, 25, 0, -8)
 
 [node name="sm_pillar_corner_wall_022" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(8.74228e-08, 0, -1, 0, 1, 0, 1, 0, 8.74228e-08, 24, 8, -8)
+transform = Transform3D(8.74228e-08, 0, -1, 0, 1, 0, 1, 0, 8.74228e-08, 25, 8, -8)
 
 [node name="sm_pillar_corner_wall_023" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(8.74228e-08, 0, -1, 0, 1, 0, 1, 0, 8.74228e-08, 24, 16, -8)
+transform = Transform3D(8.74228e-08, 0, -1, 0, 1, 0, 1, 0, 8.74228e-08, 25, 16, -8)
 
 [node name="sm_pillar_corner_wall_019" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(-1, 0, -4.37114e-08, 0, 1, 0, 4.37114e-08, 0, -1, 24, 8, 13)
+transform = Transform3D(-1, 0, -4.37114e-08, 0, 1, 0, 4.37114e-08, 0, -1, 25, 8, 13)
 
 [node name="sm_pillar_corner_wall_020" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(-1, 0, -4.37114e-08, 0, 1, 0, 4.37114e-08, 0, -1, 24, 16, 13)
+transform = Transform3D(-1, 0, -4.37114e-08, 0, 1, 0, 4.37114e-08, 0, -1, 25, 16, 13)
 
 [node name="sm_pillar_corner_wall_016" parent="." instance=ExtResource("31_pwwx6")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -26, 0, 21)
@@ -595,14 +587,11 @@ transform = Transform3D(1, 0, -4.37114e-08, 0, 1, 0, 4.37114e-08, 0, 1, -26, 0, 
 [node name="sm_pillar_corner_wall_025" parent="." instance=ExtResource("31_pwwx6")]
 transform = Transform3D(1, 0, -4.37114e-08, 0, 1, 0, 4.37114e-08, 0, 1, -26, 8, -16)
 
-[node name="sm_pillar_corner_wall_026" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(-8.74228e-08, 0, -1, 0, 1, 0, 1, 0, -8.74228e-08, 32, 0, -16)
-
 [node name="sm_pillar_corner_wall_027" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(-8.74228e-08, 0, -1, 0, 1, 0, 1, 0, -8.74228e-08, 32, 8, -16)
+transform = Transform3D(-8.74228e-08, 0, -1, 0, 1, 0, 1, 0, -8.74228e-08, 33, 8, -16)
 
 [node name="sm_pillar_corner_wall_028" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(-1, 0, 1.31134e-07, 0, 1, 0, -1.31134e-07, 0, -1, 32, 8, 21)
+transform = Transform3D(-1, 0, 1.31134e-07, 0, 1, 0, -1.31134e-07, 0, -1, 33, 8, 21)
 
 [node name="sm_pillar_corner_wall_015" parent="." instance=ExtResource("31_pwwx6")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -18, 8, 13)
@@ -679,9 +668,6 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0,
 [node name="sm_wall_wall_021" parent="." instance=ExtResource("14_ktst3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7, 0, -16)
 
-[node name="sm_wall_wall_051" parent="." instance=ExtResource("14_ktst3")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15, 0, -16)
-
 [node name="sm_wall_wall_030" parent="." instance=ExtResource("14_ktst3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15, 0, -8)
 
@@ -689,7 +675,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15, 0,
 transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, 32, 16, 6)
 
 [node name="sm_wall_wall_050" parent="." instance=ExtResource("14_ktst3")]
-transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, 32, 8, 19)
+transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, 33, 8, 19)
 
 [node name="sm_arch_wall_072" parent="." instance=ExtResource("10_iai3x")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 16, 13)
@@ -713,7 +699,7 @@ transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, 32, 16
 transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, 16, 16, 19)
 
 [node name="sm_wall_wall_052" parent="." instance=ExtResource("14_ktst3")]
-transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, 32, 8, -7)
+transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, 33, 8, -7)
 
 [node name="sm_wall_wall_054" parent="." instance=ExtResource("14_ktst3")]
 transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, -25, 8, -7)
@@ -725,10 +711,10 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15, 0,
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 23, 0, 12)
 
 [node name="sm_wall_wall_034" parent="." instance=ExtResource("14_ktst3")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 23, 0, 6)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 24, 0, 7)
 
 [node name="sm_wall_wall_035" parent="." instance=ExtResource("14_ktst3")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 23, 0, -8)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 24, 0, -9)
 
 [node name="sm_wall_wall_033" parent="." instance=ExtResource("14_ktst3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 23, 0, -8)
@@ -758,19 +744,13 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -26, 0
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25, 0, -2)
 
 [node name="sm_wall_wall_036" parent="." instance=ExtResource("15_yi7at")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 8, -2)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33, 8, -2)
 
 [node name="sm_wall_wall_049" parent="." instance=ExtResource("15_yi7at")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 8, 11)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33, 8, 11)
 
 [node name="sm_doorway_wall_012" parent="." instance=ExtResource("28_s6o4v")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -30, 0, 6)
-
-[node name="sm_doorway_wall_017" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 16, 13)
-
-[node name="sm_doorway_wall_018" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 16, -1)
 
 [node name="sm_doorway_wall_013" parent="." instance=ExtResource("28_s6o4v")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15, 8, 20)
@@ -794,13 +774,13 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 31, 8,
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 16, -15)
 
 [node name="sm_pillar_corner_wall_029" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(-8.74228e-08, 0, -1, 0, 1, 0, 1, 0, -8.74228e-08, 32, 16, -16)
+transform = Transform3D(-8.74228e-08, 0, -1, 0, 1, 0, 1, 0, -8.74228e-08, 33, 16, -16)
 
 [node name="sm_pillar_corner_wall_031" parent="." instance=ExtResource("31_pwwx6")]
 transform = Transform3D(1, 0, -4.37114e-08, 0, 1, 0, 4.37114e-08, 0, 1, 15, 16, -16)
 
 [node name="sm_wall_wall_055" parent="." instance=ExtResource("14_ktst3")]
-transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, 32, 16, -7)
+transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, 33, 16, -7)
 
 [node name="sm_wall_wall_061" parent="." instance=ExtResource("14_ktst3")]
 transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, 16, 16, -7)
@@ -814,35 +794,29 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 31, 16
 [node name="sm_wall_wall_048" parent="." instance=ExtResource("14_ktst3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17, 8, -16)
 
-[node name="sm_doorway_wall_015" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15, 8, -16)
-
-[node name="sm_doorway_wall_016" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 8, -16)
-
 [node name="sm_stairs_wall_012" parent="." instance=ExtResource("17_ofkah")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 0, 6)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, 0, 6)
 
 [node name="sm_stairs_wall_013" parent="." instance=ExtResource("17_ofkah")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 4, 6)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16, 4, 6)
 
 [node name="sm_stairs_wall_016" parent="." instance=ExtResource("17_ofkah")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 12, 0)
 
 [node name="sm_stairs_wall_014" parent="." instance=ExtResource("17_ofkah")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 0, -6)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, 0, -6)
 
 [node name="sm_stairs_wall_015" parent="." instance=ExtResource("17_ofkah")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 4, -6)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16, 4, -6)
 
 [node name="sm_arch_wall_049" parent="." instance=ExtResource("18_owvy7")]
-transform = Transform3D(-4.2222e-08, 0.258819, -0.965926, 1.13133e-08, 0.965926, 0.258819, 1, 0, -4.37114e-08, 23, 8, -1)
+transform = Transform3D(-4.37114e-08, -4.47035e-08, -1, -4.79303e-14, 1, -4.47035e-08, 1, -9.1951e-16, -4.37114e-08, 24, 8, -1)
 
 [node name="sm_arch_wall_050" parent="." instance=ExtResource("18_owvy7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 8, -7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 8, -7)
 
 [node name="sm_arch_wall_066" parent="." instance=ExtResource("18_owvy7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 16, -7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 16, -7)
 
 [node name="sm_arch_wall_051" parent="." instance=ExtResource("18_owvy7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, -7)
@@ -851,10 +825,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, -7)
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7, 8, 12)
 
 [node name="sm_arch_wall_056" parent="." instance=ExtResource("18_owvy7")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 22, 8, 12)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 23, 8, 12)
 
 [node name="sm_arch_wall_073" parent="." instance=ExtResource("18_owvy7")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 22, 16, 12)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 23, 16, 12)
 
 [node name="sm_arch_wall_055" parent="." instance=ExtResource("18_owvy7")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 8, 12)
@@ -881,19 +855,19 @@ transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 9, 0, -1
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16, 0, 6)
 
 [node name="sm_railing_wall_017" parent="." instance=ExtResource("19_3j7mq")]
-transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 15, 8, -7)
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 16, 8, -7)
 
 [node name="sm_railing_wall_021" parent="." instance=ExtResource("19_3j7mq")]
-transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 15, 16, -7)
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 16, 16, -7)
 
 [node name="sm_railing_wall_018" parent="." instance=ExtResource("19_3j7mq")]
-transform = Transform3D(1.49012e-07, 0, -1, 0, 1, 0, 1, 0, 1.49012e-07, 23, 8, -1)
+transform = Transform3D(1.49012e-07, 0, -1, 0, 1, 0, 1, 0, 1.49012e-07, 24, 8, -1)
 
 [node name="sm_railing_wall_013" parent="." instance=ExtResource("19_3j7mq")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 22, 8, 12)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 23, 8, 12)
 
 [node name="sm_railing_wall_024" parent="." instance=ExtResource("19_3j7mq")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 22, 16, 12)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 23, 16, 12)
 
 [node name="sm_railing_wall_022" parent="." instance=ExtResource("20_c7at6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.2399, 8, -2)
@@ -902,10 +876,10 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.23
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, 8, 11)
 
 [node name="sm_railing_wall_025" parent="." instance=ExtResource("20_c7at6")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 23, 16, 7)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 24, 16, 7)
 
 [node name="sm_railing_wall_026" parent="." instance=ExtResource("20_c7at6")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 23, 16, -6)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 24, 16, -6)
 
 [node name="sm_balcony_wall_012" parent="." instance=ExtResource("21_kmpje")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, 8, 6)
@@ -917,37 +891,301 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 8, -7)
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 8, 12)
 
 [node name="SpotLight3D6" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 4, 7, 17)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 4, 6.13215, 17)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
 
 [node name="SpotLight3D7" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 4, 7, 17)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -5, 6.13215, 17)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
 
 [node name="SpotLight3D8" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -5, 7, 17)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -13, 6.13215, 17)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
 
 [node name="SpotLight3D9" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -5, 7, 17)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -21, 6.13215, 17)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D17" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -5, 6.13215, -12)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D20" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -5, 6.13215, -12)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D18" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -13, 6.13215, -12)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D19" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -21, 6.13215, -12)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D21" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -5, 14.1322, -12)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D25" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 4, 14.1322, -12)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D26" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 11, 14.1322, -12)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D27" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 19, 14.1322, -12)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D28" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 27, 14.1322, -12)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D22" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -5, 14.1322, -12)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D23" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -13, 14.1322, -12)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D24" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -21, 14.1322, -12)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D29" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -5, 14.1322, 16)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D30" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 4, 14.1322, 16)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D31" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 11, 14.1322, 16)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D32" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 19, 14.1322, 16)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D33" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 27, 14.1322, 16)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D34" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -13, 14.1322, 16)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D35" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -21, 14.1322, 16)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D36" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -21, 14.1322, 10)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D37" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -21, 14.1322, 2)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D38" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -21, 14.1322, -5)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D39" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 28, 14.1322, 10)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D40" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 28, 14.1322, 2)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D41" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 28, 14.1322, -5)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D42" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 19, 22.1322, -12)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D43" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 27, 22.1322, -12)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D44" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 19, 22.1322, 16)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D45" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 27, 22.1322, 16)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D48" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 28, 22.1322, 10)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D49" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 28, 22.1322, 2)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D50" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 28, 22.1322, -5)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
 
 [node name="SpotLight3D10" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 4, 7, -12)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -21, 6.13215, 9)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -21, 6.13215, 2)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -21, 6.13215, -5)
+light_color = Color(1, 0.772549, 0.690196, 1)
+light_energy = 6.536
+spot_range = 7.113
+spot_angle = 73.58
 
 [node name="SpotLight3D11" type="SpotLight3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0.258819, 3.09086e-08, -0.965926, 0.965926, -5.35353e-08, 0.258819, -5, 2.22749, -9)
+light_color = Color(1, 0.905882, 0.690196, 1)
+light_energy = 4.705
+shadow_enabled = true
+spot_angle = 82.3351
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0.258819, 3.09086e-08, -0.965926, 0.965926, -5.35353e-08, 0.258819, 4, 2.22749, -9)
+light_color = Color(1, 0.905882, 0.690196, 1)
+light_energy = 4.705
+shadow_enabled = true
+spot_angle = 82.3351
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.07325e-08, 1, 2.10847e-08, 0.258819, 3.09086e-08, -0.965926, -0.965926, -3.38875e-08, -0.258819, 4, 2.22749, 13)
+light_color = Color(1, 0.905882, 0.690196, 1)
+light_energy = 4.705
+shadow_enabled = true
+spot_angle = 82.3351
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.07325e-08, 1, 2.10847e-08, 0.258819, 3.09086e-08, -0.965926, -0.965926, -3.38875e-08, -0.258819, -4, 2.22749, 13)
 light_color = Color(1, 0.905882, 0.690196, 1)
 light_energy = 4.705
 shadow_enabled = true
@@ -971,213 +1209,40 @@ shadow_enabled = true
 spot_range = 10.1955
 spot_angle = 82.3351
 
-[node name="SpotLight3D12" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -5, 7, -12)
+[node name="SpotLight3D51" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.297459, -0.78067, 0.549611, 0.879458, -3.21347e-07, 0.475977, -0.371581, 0.624943, 0.686566, -11.0521, 16.2508, -0.906546)
 light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
+light_energy = 4.17
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+spot_range = 10.1955
 spot_angle = 82.3351
 
-[node name="SpotLight3D13" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -13, 7, 17)
+[node name="SpotLight3D52" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.435908, 0.401597, 0.805422, 0.879458, -7.23532e-08, 0.475977, 0.191151, 0.915817, -0.353187, -11.0521, 16.2508, 7.09345)
 light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
+light_energy = 4.17
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+spot_range = 10.1955
 spot_angle = 82.3351
 
-[node name="SpotLight3D19" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 4, 15, 17)
+[node name="SpotLight3D53" type="SpotLight3D" parent="."]
+transform = Transform3D(0.297459, 0.78067, -0.549611, 0.879458, -3.07106e-07, 0.475977, 0.371581, -0.624943, -0.686566, 17.9479, 16.2508, 7.09345)
 light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
+light_energy = 4.17
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+spot_range = 10.1955
 spot_angle = 82.3351
 
-[node name="SpotLight3D20" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -5, 15, 17)
+[node name="SpotLight3D54" type="SpotLight3D" parent="."]
+transform = Transform3D(0.435908, -0.401597, -0.805422, 0.879458, -9.68849e-08, 0.475977, -0.191151, -0.915817, 0.353187, 17.9479, 16.2508, -0.906546)
 light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D23" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 24, 15, 17)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D24" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 12, 15, 17)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D21" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -13, 15, 17)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D22" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -21, 15, 17)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D25" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 4, 15, -11)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D26" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -5, 15, -11)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D27" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 24, 15, -11)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D39" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 24, 20, 3.00001)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D28" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 12, 15, -11)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D29" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -13, 15, -11)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D30" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -21, 15, -11)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D40" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -21, 15, 3.00001)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D41" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 11, 5, -3.99999)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_range = 6.0
-spot_angle = 36.7099
-
-[node name="SpotLight3D42" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 11, 5, 9.00001)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_range = 6.0
-spot_angle = 36.7099
-
-[node name="SpotLight3D43" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 20, 5, -3.99999)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_range = 6.0
-spot_angle = 36.7099
-
-[node name="SpotLight3D44" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 20, 5, 9.00001)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_range = 6.0
-spot_angle = 36.7099
-
-[node name="SpotLight3D31" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 4, 15, -11)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D32" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -5, 15, -11)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D33" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 24, 15, -11)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D45" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 26, 15, 3.00001)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_range = 8.0
-spot_angle = 82.3351
-
-[node name="SpotLight3D37" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 24, 21, 17)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D38" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 24, 21, -11)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D34" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 12, 15, -11)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D35" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -13, 15, -11)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D36" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -21, 15, -11)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D14" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -22, 7, 17)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D18" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -22, 7, 2)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D15" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -13, 7, -12)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D16" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -22, 7, -12)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
-spot_angle = 82.3351
-
-[node name="SpotLight3D17" type="SpotLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -22, 7, -12)
-light_color = Color(1, 0.905882, 0.690196, 1)
-light_energy = 4.705
+light_energy = 4.17
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+spot_range = 10.1955
 spot_angle = 82.3351
 
 [node name="sm_window_wall_012" parent="." instance=ExtResource("22_urfpm")]
@@ -1243,17 +1308,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 16, -8)
 [node name="sm_pillar_wall_045" parent="." instance=ExtResource("24_6o2a8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 16, -8)
 
-[node name="sm_pillar_wall_046" parent="." instance=ExtResource("24_6o2a8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 16, -8)
-
 [node name="sm_pillar_wall_040" parent="." instance=ExtResource("24_6o2a8")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16, 16, 13)
 
 [node name="sm_pillar_wall_047" parent="." instance=ExtResource("24_6o2a8")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16, 16, 13)
-
-[node name="sm_pillar_wall_050" parent="." instance=ExtResource("24_6o2a8")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 24, 16, 13)
 
 [node name="sm_pillar_wall_039" parent="." instance=ExtResource("25_t30xx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 24, -7)
@@ -1312,171 +1371,6 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, 24,
 [node name="sm_roof_wall_05" parent="." instance=ExtResource("27_h0qnh")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16, 24, -7)
 
-[node name="sm_floor_wall_015" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 20)
-
-[node name="sm_floor_wall_012" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, -2)
-
-[node name="sm_floor_wall_013" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 8, -8)
-
-[node name="sm_floor_wall_014" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 8, -8)
-
-[node name="sm_floor_wall_016" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, -8)
-
-[node name="sm_floor_wall_017" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 8, -8)
-
-[node name="sm_floor_wall_028" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 16, -8)
-
-[node name="sm_floor_wall_029" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 16, -8)
-
-[node name="sm_floor_wall_030" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, -8)
-
-[node name="sm_floor_wall_031" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 16, -8)
-
-[node name="sm_floor_wall_018" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 8, -8)
-
-[node name="sm_floor_wall_019" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 8, 20)
-
-[node name="sm_floor_wall_032" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 8, 6)
-
-[node name="sm_floor_wall_033" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 8, 6)
-
-[node name="sm_floor_wall_034" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 8, 6)
-
-[node name="sm_floor_wall_020" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 8, 20)
-
-[node name="sm_floor_wall_021" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 20)
-
-[node name="sm_floor_wall_022" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 8, 20)
-
-[node name="sm_floor_wall_024" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 16, 20)
-
-[node name="sm_floor_wall_025" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 16, 20)
-
-[node name="sm_floor_wall_026" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 20)
-
-[node name="sm_floor_wall_027" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 16, 20)
-
-[node name="sm_floor_wall_023" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 8, 20)
-
-[node name="sm_floor_wall_035" parent="." instance=ExtResource("29_olti6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 8, 20)
-
-[node name="sm_floor_wall_036" parent="." instance=ExtResource("29_olti6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 8, -7)
-
-[node name="sm_floor_wall_037" parent="." instance=ExtResource("29_olti6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 8, -7)
-
-[node name="sm_floor_wall_038" parent="." instance=ExtResource("29_olti6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 8, 20)
-
-[node name="sm_floor_wall_039" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 16, -8)
-
-[node name="sm_floor_wall_041" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 16, 20)
-
-[node name="sm_floor_wall_042" parent="." instance=ExtResource("29_olti6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 16, -7)
-
-[node name="sm_floor_wall_043" parent="." instance=ExtResource("29_olti6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 16, 20)
-
-[node name="sm_floor_wall_044" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 8, 11)
-
-[node name="sm_floor_wall_066" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -30, 8, -2)
-
-[node name="sm_floor_wall_045" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 8, -2)
-
-[node name="sm_floor_wall_051" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 8, 6)
-
-[node name="sm_floor_wall_052" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 8, 11)
-
-[node name="sm_floor_wall_053" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 8, -2)
-
-[node name="sm_floor_wall_054" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 8, 6)
-
-[node name="sm_floor_wall_055" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 8, 11)
-
-[node name="sm_floor_wall_056" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 8, -2)
-
-[node name="sm_floor_wall_057" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 16, 6)
-
-[node name="sm_floor_wall_058" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 16, 11)
-
-[node name="sm_floor_wall_059" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 16, -2)
-
-[node name="sm_floor_wall_040" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 24, -8)
-
-[node name="sm_floor_wall_060" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 24, 20)
-
-[node name="sm_floor_wall_061" parent="." instance=ExtResource("29_olti6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 24, -7)
-
-[node name="sm_floor_wall_062" parent="." instance=ExtResource("29_olti6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 24, 20)
-
-[node name="sm_floor_wall_063" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 24, 6)
-
-[node name="sm_floor_wall_064" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 24, 11)
-
-[node name="sm_floor_wall_065" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 24, -2)
-
-[node name="sm_floor_wall_046" parent="." instance=ExtResource("28_s6o4v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 16, 6)
-
-[node name="sm_floor_wall_047" parent="." instance=ExtResource("29_olti6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 16, 20)
-
-[node name="sm_floor_wall_048" parent="." instance=ExtResource("29_olti6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 16, -7)
-
-[node name="sm_floor_wall_049" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 16, 11)
-
-[node name="sm_floor_wall_050" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 16, -2)
-
 [node name="sm_stairs_wall_022" parent="." instance=ExtResource("31_2q4bm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 8, 12)
 
@@ -1486,20 +1380,41 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 15, 8,
 [node name="sm_stairs_wall_032" parent="." instance=ExtResource("32_4gv45")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 12, 5)
 
-[node name="sm_floor_wall_03" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 8, -2)
+[node name="SmGraybox01" parent="." instance=ExtResource("32_tebg2")]
+transform = Transform3D(60, 0, 0, 0, 1.7, 0, 0, 0, 8, -25, 8, -15)
 
-[node name="sm_floor_wall_04" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 8, 11)
+[node name="SmGraybox02" parent="." instance=ExtResource("32_tebg2")]
+transform = Transform3D(60, 0, 0, 0, 1.7, 0, 0, 0, 8, -25, 16, -15)
 
-[node name="sm_floor_wall_05" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 8, -2)
+[node name="SmGraybox03" parent="." instance=ExtResource("32_tebg2")]
+transform = Transform3D(60, 0, 0, 0, 1.7, 0, 0, 0, 8, -25, 8, 12)
 
-[node name="sm_floor_wall_06" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 8, 11)
+[node name="SmGraybox04" parent="." instance=ExtResource("32_tebg2")]
+transform = Transform3D(60, 0, 0, 0, 1.7, 0, 0, 0, 23.04, -25, 16, 12)
 
-[node name="sm_floor_wall_07" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 16, -2)
+[node name="SmGraybox05" parent="." instance=ExtResource("32_tebg2")]
+transform = Transform3D(8, 0, 0, 0, 1.7, 0, 0, 0, 19, -25, 16, -7)
 
-[node name="sm_floor_wall_08" parent="." instance=ExtResource("31_pwwx6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 16, 11)
+[node name="SmGraybox06" parent="." instance=ExtResource("32_tebg2")]
+transform = Transform3D(8, 0, 0, 0, 1.7, 0, 0, 0, 19, -25, 8, -7)
+
+[node name="SmGraybox13" parent="." instance=ExtResource("32_tebg2")]
+transform = Transform3D(8, 0, 0, 0, 1.7, 0, 0, 0, 14.25, -34, 8, -3)
+
+[node name="SmGraybox07" parent="." instance=ExtResource("32_tebg2")]
+transform = Transform3D(8, 0, 0, 0, 1.7, 0, 0, 0, 19, 23, 16, -7)
+
+[node name="SmGraybox08" parent="." instance=ExtResource("32_tebg2")]
+transform = Transform3D(9.6, 0, 0, 0, 1.7, 0, 0, 0, 19, 24, 8, -7)
+
+[node name="SmGraybox09" parent="." instance=ExtResource("32_tebg2")]
+transform = Transform3D(8, 0, 0, 0, 1.7, 0, 0, 0, 19, 23, 24, -7)
+
+[node name="SmGraybox11" parent="." instance=ExtResource("32_tebg2")]
+transform = Transform3D(-3.49691e-07, 0, -19, 0, 1.7, 0, 8, 0, -8.30516e-07, 32, 24, -15)
+
+[node name="SmGraybox12" parent="." instance=ExtResource("32_tebg2")]
+transform = Transform3D(-5.59506e-07, 0, -20.9, 0, 1.7, 0, 12.8, 0, -9.13568e-07, 32, 24, 12)
+
+[node name="SmGraybox10" parent="." instance=ExtResource("32_tebg2")]
+transform = Transform3D(10.4, 0, 0, 0, 1.7, 0, 0, 0, 19, 23, 16, -7)
