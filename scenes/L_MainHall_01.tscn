@@ -210,13 +210,13 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("5_87c1p")
 
 [node name="MeshInstance3D15" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.68901e-07, 0, -1, 0, 4.9, 0, 3.864, 0, -4.37114e-08, 32.4748, 18.4149, 9.2872)
+transform = Transform3D(-3.04022e-07, 0, -1, 0, 4.9, 0, 6.9552, 0, -4.37114e-08, 32.4748, 18.4149, 9.2872)
 mesh = SubResource("BoxMesh_fywqo")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("5_87c1p")
 
 [node name="MeshInstance3D16" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.39277e-07, 0, -1, 0, 4.9, 0, 5.474, 0, -4.37114e-08, 32.4748, 18.4149, -3.71275)
+transform = Transform3D(-2.39277e-07, 0, -1, 0, 7.84, 0, 5.474, 0, -4.37114e-08, 32.4748, 18.4149, -3.71275)
 mesh = SubResource("BoxMesh_fywqo")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("5_87c1p")
@@ -1402,7 +1402,7 @@ transform = Transform3D(8, 0, 0, 0, 1.7, 0, 0, 0, 19, -25, 8, -7)
 transform = Transform3D(8, 0, 0, 0, 1.7, 0, 0, 0, 14.25, -34, 8, -3)
 
 [node name="SmGraybox07" parent="." instance=ExtResource("32_tebg2")]
-transform = Transform3D(8, 0, 0, 0, 1.7, 0, 0, 0, 19, 23, 16, -7)
+transform = Transform3D(8, 0, 0, 0, 1.7, 0, 0, 0, 19, 24, 16, -7)
 
 [node name="SmGraybox08" parent="." instance=ExtResource("32_tebg2")]
 transform = Transform3D(9.6, 0, 0, 0, 1.7, 0, 0, 0, 19, 24, 8, -7)
@@ -1415,6 +1415,3 @@ transform = Transform3D(-3.49691e-07, 0, -19, 0, 1.7, 0, 8, 0, -8.30516e-07, 32,
 
 [node name="SmGraybox12" parent="." instance=ExtResource("32_tebg2")]
 transform = Transform3D(-5.59506e-07, 0, -20.9, 0, 1.7, 0, 12.8, 0, -9.13568e-07, 32, 24, 12)
-
-[node name="SmGraybox10" parent="." instance=ExtResource("32_tebg2")]
-transform = Transform3D(10.4, 0, 0, 0, 1.7, 0, 0, 0, 19, 23, 16, -7)
