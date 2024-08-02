@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://brhohpangmcby"]
+
+[ext_resource type="Shader" path="res://shaders/psx_lit.gdshader" id="1_0yhsc"]
+[ext_resource type="Texture2D" uid="uid://dsu0d72kvqiwa" path="res://assets/textures/T_archtrim_02.png" id="2_t5j11"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_0yhsc")
+shader_parameter/modulate_color = Color(1, 1, 1, 1)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+shader_parameter/uv_pan_velocity = Vector2(0, 0)
+shader_parameter/albedoTex = ExtResource("2_t5j11")

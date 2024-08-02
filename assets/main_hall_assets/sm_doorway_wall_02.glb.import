@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://xfb77iu2ypuh"
-path="res://.godot/imported/sm_wall_wall_01.glb-cac002f52a4e00c3c8c6e35b524a6b4a.scn"
+uid="uid://ckrcjbf26m2ne"
+path="res://.godot/imported/sm_doorway_wall_02.glb-d1c876817f6524053b79d456492db0db.scn"
 
 [deps]
 
-source_file="res://assets/main_hall_assets/sm_wall_wall_01.glb"
-dest_files=["res://.godot/imported/sm_wall_wall_01.glb-cac002f52a4e00c3c8c6e35b524a6b4a.scn"]
+source_file="res://assets/main_hall_assets/sm_doorway_wall_02.glb"
+dest_files=["res://.godot/imported/sm_doorway_wall_02.glb-d1c876817f6524053b79d456492db0db.scn"]
 
 [params]
 
@@ -31,13 +31,17 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"M_Grid_04.005": {
+"M_Grid_04.008": {
 "use_external/enabled": true,
 "use_external/path": "res://assets/Materials/M_stoneWalls_01.tres"
 },
 "pattern": {
 "use_external/enabled": true,
 "use_external/path": "res://assets/Materials/M_archtrim_01.tres"
+},
+"pattern-2": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/Materials/M_archtrim_02.tres"
 }
 }
 }
