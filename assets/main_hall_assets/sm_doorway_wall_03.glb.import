@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bddndwl5bjllg"
-path="res://.godot/imported/sm_doorway_wall_01.glb-bf8e8c901e286e79f1a9813927fc14fc.scn"
+uid="uid://i8oq4lcuxa3h"
+path="res://.godot/imported/sm_doorway_wall_03.glb-d743e62b378b4f9afd53f8f4d874afb1.scn"
 
 [deps]
 
-source_file="res://assets/main_hall_assets/sm_doorway_wall_01.glb"
-dest_files=["res://.godot/imported/sm_doorway_wall_01.glb-bf8e8c901e286e79f1a9813927fc14fc.scn"]
+source_file="res://assets/main_hall_assets/sm_doorway_wall_03.glb"
+dest_files=["res://.godot/imported/sm_doorway_wall_03.glb-d743e62b378b4f9afd53f8f4d874afb1.scn"]
 
 [params]
 
@@ -31,7 +31,7 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"M_Grid_04.007": {
+"M_Grid_04.008": {
 "use_external/enabled": true,
 "use_external/path": "res://assets/Materials/M_stoneWalls_01.tres"
 },
