@@ -33,7 +33,15 @@ _subresources={
 "materials": {
 "M_Grid_04": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/Materials/M_Grid_04.tres"
+"use_external/path": "res://assets/Materials/M_archtrim_02.tres"
+},
+"Material.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/Materials/M_archtrim_02_alpha.tres"
+},
+"archtrim_03": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/Materials/M_archtrim_03.tres"
 }
 }
 }
